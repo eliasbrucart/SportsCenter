@@ -1,0 +1,51 @@
+.signup{
+    background-color: #000;
+    padding-top: 50px;
+    padding-bottom: 200px;
+}
+.signUpBox{
+    background-color: rgb(32, 32, 32);
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px 20px;
+}
+.signUpTitle{
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0px;
+}
+.signUpBtn{
+    background-color: rgb(92, 20, 209);
+    color: #ffffff;
+    padding: 10px 0px;
+    margin: 30px 0px;
+    width: 55%;
+}
+
+@media (min-width:1200px) {
+    .signup{
+        padding-bottom: 400px;
+    }
+}
+
+
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+
+@media (max-width:1199px) and (min-width:992px) {}
+
+
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+
+@media (max-width:991px) and (min-width:768px) {}
+
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+
+@media (max-width:767px) {}

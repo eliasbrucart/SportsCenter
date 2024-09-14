@@ -1,0 +1,45 @@
+.adminModule{
+    margin: 20px 0px;
+}
+
+.dataTables_length label{
+    display: inline-block;
+}
+
+.dataTables_length select{
+    display: block;
+}
+
+.paginate_button{
+    margin-right: 10px;
+}
+
+.dataTables_paginate.paging_simple_numbers{
+}
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+@media (max-width:767px){
+    .videoBox{
+        margin: 20px 0px;
+    }
+}
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+
+@media (max-width:991px) and (min-width:768px){
+}
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+
+@media (max-width:1199px) and (min-width:992px){
+}
+/*=============================================
+ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
+=============================================*/
+
+@media (min-width:1200px){
+}

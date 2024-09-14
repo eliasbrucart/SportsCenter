@@ -1,0 +1,89 @@
+.videosModule{
+    margin: 100px 0px;
+}
+
+.videoList{
+    list-style: none;
+}
+
+.videoBox{
+    background-color: rgb(80, 80, 80);
+    padding: 20px 0px;
+    border-radius: 4px 4px 4px 4px;
+    margin: 20px 0px;
+}
+
+.videoBox video{
+    width: 100%;
+}
+
+.videoBox h3{
+    color: #ffffff;
+    margin: 5px 7px;
+}
+
+.videoBox small{
+    color: #ffffff;
+    width: 100%;
+    margin: 0px 20px;
+}
+
+.uploadVideo{
+    background-color: #b1b1b1;
+}
+
+.uploadVideo h3{
+    text-align: center;
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+.uploadVideo input{
+    margin-top: 20px;
+}
+
+.uploadVideo video{
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.uploadvideoBtn{
+    margin: 10px 0px;
+}
+
+.videoLabel, .posterLabel{
+    margin-top: 30px;
+    color: #000;
+    font-size: 20px;
+}
+
+.nameVideoInput{
+    margin: 45px 0px;
+}
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+@media (max-width:767px){
+    .videoBox{
+        margin: 20px 0px;
+    }
+}
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+
+@media (max-width:991px) and (min-width:768px){
+}
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+
+@media (max-width:1199px) and (min-width:992px){
+}
+/*=============================================
+ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
+=============================================*/
+
+@media (min-width:1200px){
+}

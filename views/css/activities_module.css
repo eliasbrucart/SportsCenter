@@ -1,0 +1,62 @@
+.uploadCuotaModule{
+    margin: 20px 0px;
+}
+
+.activityInfoTitle, .activityTitle, .cuotasTitle{
+    margin-bottom: 20px;
+}
+
+.cuotasInfoBox{
+    background-color: gray;
+    margin: 20px 0px;
+}
+
+.cuotasInfoBox p{
+    color: #ffffff;
+    margin: 30px 0px;
+}
+
+.addCuotaTitle{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.containerDays{
+    margin: 10px 0px;
+}
+
+.editCuotaBtn, .deleteCuotaBtn{
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+@media (max-width:767px){
+    .editCuotaBtn{
+        margin-left: -5px;
+    }
+    .deleteCuotaBtn{
+        margin-left: 20px;
+        margin-top: 25px;
+    }
+}
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+
+@media (max-width:991px) and (min-width:768px){
+}
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+
+@media (max-width:1199px) and (min-width:992px){
+}
+/*=============================================
+ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
+=============================================*/
+
+@media (min-width:1200px){
+}

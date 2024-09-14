@@ -1,0 +1,42 @@
+.uploadModule{
+    margin: 20px 0px;
+}
+
+.containerActivity label, .containerDays label, .containerState label, .containerObservations label{
+    margin-left: 15px;
+}
+
+.datePickerBox{
+    margin: 20px 0px;
+}
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+@media (max-width:767px){
+    .videoBox{
+        margin: 20px 0px;
+    }
+
+    .containerActivity label, .containerDays label, .containerState label, .containerObservations label{
+        margin-left: 5px;
+    }
+}
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+
+@media (max-width:991px) and (min-width:768px){
+}
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+
+@media (max-width:1199px) and (min-width:992px){
+}
+/*=============================================
+ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
+=============================================*/
+
+@media (min-width:1200px){
+}

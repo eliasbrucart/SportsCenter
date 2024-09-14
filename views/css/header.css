@@ -1,0 +1,88 @@
+.mainHeader{
+    margin-bottom: 100px;
+}
+.liveButton{
+	background-color: red;
+	padding-bottom: -10px;
+}
+.liveButton:hover{
+	text-decoration: none;
+	color: #ffffff;
+}
+.bar{
+	background-color: #353535;
+	padding: 20px 0;
+	line-height: 60px;
+	width: 100%;
+}
+.logo{
+	width: 50%;
+	float: left;
+}
+.mainNav{
+	display: block;
+	width: 100%;
+}
+.navBtn:hover{
+	background-color: #252525;
+	text-decoration: none;
+	color: #ffffff;
+}
+.menuMobile{
+	display: none;
+    width: 60px;
+    float: right;
+    text-align: right;
+    margin-top: 12px;
+}
+.menuMobile:hover{
+	cursor: pointer;
+}
+.menuMobile span{
+	height: 8px;
+    margin-bottom: 6px;
+    display: block;
+    background-color: #ffffff;
+}
+.headerColor{
+	background-color: #5fd6ff;
+}
+.namePage{
+	font-family: bebas;
+	font-weight: bold;
+	font-size: 25px;
+}
+.goldCup2021{
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 180px;
+	margin-top: 15px;
+}
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+@media (max-width:767px){
+	.goldCup2021{
+		display: none;
+	}
+}
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+
+@media (max-width:991px) and (min-width:768px){
+}
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+
+@media (max-width:1199px) and (min-width:992px){
+}
+/*=============================================
+ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
+=============================================*/
+
+@media (min-width:1200px){
+}

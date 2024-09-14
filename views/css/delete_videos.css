@@ -1,0 +1,81 @@
+.deleteVideosModule{
+    margin: 50px 0px;
+}
+
+.uploadedVideoList{
+    list-style: none;
+}
+
+.uploadedVideoBox{
+    background-color: rgb(220, 226, 252);
+    margin: 30px 0px;
+}
+
+.uploadedVideoInfo{
+}
+
+.uploadedVideoID{
+    font-size: 20px;
+    color: #000;
+}
+
+.deleteUploadedVideo{
+    background-color: rgb(255, 0, 0);
+    padding: 10px 5px;
+    margin: 65px 0px;
+    color: #ffffff;
+}
+
+.deleteUploadedVideoBox{
+}
+
+/* Estilos del modal de edicion */
+
+.editUploadedVideo{
+    background-color: rgb(44, 83, 255);
+    padding: 10px 10px;
+    margin: 65px 0px;
+    color: #ffffff;
+}
+
+.editNameVideoInput{
+    width: 100%;
+}
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+@media (max-width:767px){
+    .uploadedVideoPoster{
+        width: 100%;
+    }
+}
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+
+@media (max-width:991px) and (min-width:768px){
+    .uploadedVideoPoster{
+        width: 100%;
+    }
+}
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+
+@media (max-width:1199px) and (min-width:992px){
+    .uploadedVideoPoster{
+        width: 100%;
+        margin: 35px 0px;
+    }
+}
+/*=============================================
+ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
+=============================================*/
+
+@media (min-width:1200px){
+    .uploadedVideoPoster{
+        width: 100%;
+        margin: 35px 0px;
+    }
+}
