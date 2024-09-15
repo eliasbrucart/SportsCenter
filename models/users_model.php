@@ -303,6 +303,20 @@ class UsersModel{
 
         $stmt = null;
     }
+
+    static public function Income($table, $documentIncomeCustomer){
+        $stmt = Connection::Connect()->prepare("SELECT * FROM $table WHERE documentNumber = :documentNumber");
+
+        $stmt->bindParam(":documentNumber", $documentIncomeCustomer, PDO::PARAM_INT);
+
+        $stmt->execute();
+
+        return $stmt->fetch();
+
+        $stmt->close();
+
+        $stmt = null;
+    }
 }
 
 ?>

@@ -114,6 +114,7 @@
     <script src="<?php echo $url;?>views/js/activities_module.js" type="text/javascript"></script>
     <script src="<?php echo $url;?>views/js/history_payments.js" type="text/javascript"></script>
     <script src="<?php echo $url;?>views/js/resume_module.js" type="text/javascript"></script>
+    <script src="<?php echo $url;?>views/js/income_module.js" type="text/javascript"></script>
 
     <!-- Template Javascript -->
     <script src="<?php echo $url; ?>views/js/main.js"></script>

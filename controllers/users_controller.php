@@ -337,6 +337,14 @@ class UsersController{
 
         return $response;
     }
+
+    static public function Income($documentIncomeCustomer){
+        $table = "customers";
+
+        $response = UsersModel::Income($table, $documentIncomeCustomer);
+
+        return $response;
+    }
 }
 
 ?>

@@ -187,6 +187,13 @@ class AdminModule{
 
         echo json_encode($response);
     }
+
+    public $documentIncomeCustomer;
+    public function Income(){
+        $response = UsersController::Income($this->documentIncomeCustomer);
+
+        echo json_encode($response);
+    }
 }
 
 if(isset($_POST["idToEdit"]) || isset($_POST["editedNameCustomer"]) || isset($_POST["editedLastNameCustomer"]) || isset($_POST["editedPhoneCustomer"]) ||
@@ -333,5 +340,11 @@ if(isset($_POST["ChangeExpirationCountValue"]) && $_POST["ChangeExpirationCountV
     $changeExpirationCountValue->idCustomerChangeCountValue = $_POST["idCustomerChangeCountValue"];
     $changeExpirationCountValue->valueExpiration = $_POST["valueExpiration"];
     $changeExpirationCountValue->ChangeExpirationCountValue();
+}
+
+if(isset($_POST["incomeCustomer"]) && $_POST["incomeCustomer"]){
+    $incomeCustomer = new AdminModule();
+    $incomeCustomer->documentIncomeCustomer = $_POST["documentIncomeCustomer"];
+    $incomeCustomer->Income();
 }
 ?>
