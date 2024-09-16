@@ -61,6 +61,7 @@
                 </div>
                 <div class="form-group datePickerBox">
                     <div class="col-xs-12 col-sm-12 col-lg-12 col-xl-12">
+                        <label for="">Selecciona el dia de registro</label>
                         <div class="input-group date col-xs-12" id="datepicker">
                             <input type="text" class="form-control">
                             <span class="input-group-append">

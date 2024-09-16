@@ -19,9 +19,13 @@
                 </div>
                 <div class="form-floating mb-3 customerData">
                     <h3 class="customerName"></h3>
-                    <p class="customerDaysLeft"></p>
-                    <p class="customerExpiration"></p>
-                    <p class="customerAmount"></p>
+                    <p>Dias restantes: <span class="customerDaysLeft text-white"></span></p>
+                    <p>Su pase vence el: <span class="customerExpiration text-white"></span></p>
+                    <p>Proximo monto a pagar: <span class="customerAmount text-white"></span></p>
+                </div>
+                <div class="form-floating mb-3 customerDataError">
+                    <h3 class="text-danger font-weight-bold customerDocumentError">Error al ingresar!</h3>
+                    <p class="text-white">Revisa que el documento sea correcto!</p>
                 </div>
                 <button class="btn btn-primary py-3 w-100 mb-4" id="incomeButton" onclick="Inocme()">Ingresar</button>
             </div>

@@ -1,5 +1,6 @@
 $(function(){
     $('.customerData').hide();
+    $('.customerDataError').hide();
 });
 
 var incomeInput = document.getElementById("documentCustomerInput");
@@ -25,34 +26,46 @@ function Inocme(){
 		contentType: false,
 		processData: false,
 		success:(response)=>{
+      if(response == "false"){
+        $('.customerData').hide();
+        $('.customerDataError').show();
+      }else{
+        $('.customerData').show();
+        
+        $('.customerDataError').hide();
+        console.log("Inocme ", response);
+  
+        var parseJSON = JSON.parse(response);
+  
+        $('.customerName').text(parseJSON.name+" "+parseJSON.lastname);
+  
+        var actualDate = new Date();
+  
+        const formatter = new Intl.DateTimeFormat('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' });
+  
+        //const actualDateFormatted = formatter.format(actualDate);
+  
+        console.log("actualDate " + actualDate.getDate());
+  
+        const customerExpiration = new Date(parseJSON.expiration);
 
-      $('.customerData').show();
+        const fixedMonth = customerExpiration.getMonth()+1;
 
-			console.log("Inocme ", response);
-
-      var parseJSON = JSON.parse(response);
-
-      $('.customerName').text(parseJSON.name+" "+parseJSON.lastname);
-
-      var actualDate = new Date();
-
-	    const formatter = new Intl.DateTimeFormat('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' });
-
-      //const actualDateFormatted = formatter.format(actualDate);
-
-      console.log("actualDate " + actualDate.getDate());
-
-      const customerExpiration = new Date(parseJSON.expiration);
-
-      console.log("customerExpiration " + customerExpiration.getDate());
-
-      console.log("DaysBetween " + DaysBetween(actualDate, customerExpiration));
-
-      $('.customerDaysLeft').text("Dias restantes " + DaysBetween(actualDate, customerExpiration));
-
-      $('.customerExpiration').text("Tu pase se vence el: " + parseJSON.expiration);
-
-      $('.customerAmount').text("Proximo monto a pagar: " + parseJSON.amount);
+        const customerExpirationFormatted = customerExpiration.getDate()+"/"+fixedMonth+"/"+customerExpiration.getFullYear();
+  
+        console.log("customerExpiration " + customerExpiration.getDate());
+  
+        console.log("DaysBetween " + DaysBetween(actualDate, customerExpiration));
+  
+        $('.customerDaysLeft').text(DaysBetween(actualDate, customerExpiration));
+  
+        $('.customerExpiration').text(customerExpirationFormatted);
+  
+        $('.customerAmount').text("$"+parseJSON.amount);
+      }
+      setTimeout(function(){
+        location.reload();
+      }, 10000);
 		}
 	});
 }
