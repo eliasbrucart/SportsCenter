@@ -25,33 +25,34 @@ function Inocme(){
 		contentType: false,
 		processData: false,
 		success:(response)=>{
-            $('.customerData').show();
+
+      $('.customerData').show();
 
 			console.log("Inocme ", response);
 
-            var parseJSON = JSON.parse(response);
+      var parseJSON = JSON.parse(response);
 
-            $('.customerName').text(parseJSON.name+" "+parseJSON.lastname);
+      $('.customerName').text(parseJSON.name+" "+parseJSON.lastname);
 
-            var actualDate = new Date();
+      var actualDate = new Date();
 
-	        const formatter = new Intl.DateTimeFormat('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' });
+	    const formatter = new Intl.DateTimeFormat('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' });
 
-            //const actualDateFormatted = formatter.format(actualDate);
+      //const actualDateFormatted = formatter.format(actualDate);
 
-            console.log("actualDate " + actualDate.getDate());
+      console.log("actualDate " + actualDate.getDate());
 
-            const customerExpiration = new Date(parseJSON.expiration);
+      const customerExpiration = new Date(parseJSON.expiration);
 
-            console.log("customerExpiration " + customerExpiration.getDate());
+      console.log("customerExpiration " + customerExpiration.getDate());
 
-            console.log("DaysBetween " + DaysBetween(actualDate, customerExpiration));
+      console.log("DaysBetween " + DaysBetween(actualDate, customerExpiration));
 
-            $('.customerDaysLeft').text("Dias restantes " + DaysBetween(actualDate, customerExpiration));
+      $('.customerDaysLeft').text("Dias restantes " + DaysBetween(actualDate, customerExpiration));
 
-            $('.customerExpiration').text("Tu pase se vence el: " + parseJSON.expiration);
+      $('.customerExpiration').text("Tu pase se vence el: " + parseJSON.expiration);
 
-            $('.customerAmount').text("Proximo monto a pagar: " + parseJSON.amount);
+      $('.customerAmount').text("Proximo monto a pagar: " + parseJSON.amount);
 		}
 	});
 }

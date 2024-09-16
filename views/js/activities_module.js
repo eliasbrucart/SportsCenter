@@ -64,6 +64,8 @@ function UploadCuota(id, name){
                         type:"error",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
+                      }, function(){
+                        location.reload();
                       });
                 }, 2000);
 			}else{
@@ -75,6 +77,8 @@ function UploadCuota(id, name){
                         type:"success",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
+                      }, function(){
+                        location.reload();
                       });
                 }, 2000);
 			}
@@ -113,6 +117,8 @@ function EditActivity(){
                         type:"error",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
+                      }, function(){
+                        location.reload();
                       });
                 }, 2000);
             }else{
@@ -123,6 +129,8 @@ function EditActivity(){
                         type:"success",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
+                      }, function(){
+                        location.reload();
                       });
                 }, 2000);
             }
@@ -182,6 +190,8 @@ function DeleteActivity(){
                         type:"error",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
+                      }, function(){
+                        location.reload();
                       });
                 }, 2000);
             }else{
@@ -192,6 +202,8 @@ function DeleteActivity(){
                         type:"success",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
+                      }, function(){
+                        location.reload();
                       });
                 }, 2000);
             }
@@ -233,6 +245,8 @@ function EditCuota(){
                         type:"error",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
+                      }, function(){
+                        location.reload();
                       });
                 }, 2000);
             }else{
@@ -243,6 +257,8 @@ function EditCuota(){
                         type:"success",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
+                      }, function(){
+                        location.reload();
                       });
                 }, 2000);
             }
@@ -281,6 +297,8 @@ function DeleteCuota(){
                         type:"error",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
+                      }, function(){
+                        location.reload();
                       });
                 },2000);
             }else{
@@ -291,6 +309,8 @@ function DeleteCuota(){
                         type:"success",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
+                      }, function(){
+                        location.reload();
                       });
                 }, 2000);
             }

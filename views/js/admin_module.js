@@ -312,7 +312,9 @@ function SendEditedCustomer(){
                         type:"error",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
-                      });
+                      }, function(){
+						location.reload();
+					  });
                 }, 2000);
 			}else{
 				console.log("respuesta " + response);
@@ -323,7 +325,9 @@ function SendEditedCustomer(){
                         type:"success",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
-                      });
+                      }, function(){
+						location.reload();
+					  });
                 }, 2000);
 			}
 		}
@@ -363,7 +367,9 @@ function DeleteCustomer(){
                         type:"error",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
-                      });
+                      }, function(){
+						location.reload();
+					  });
                 }, 2000);
 			}else{
 				console.log("respuesta " + response);
@@ -374,7 +380,9 @@ function DeleteCustomer(){
                         type:"success",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
-                      });
+                      }, function(){
+						location.reload();
+					  });
                 }, 2000);
 			}
 		}
@@ -530,7 +538,7 @@ function AddHistoryPaymentCustomer(id, state){
 				}
 			}
 		});
-	}, 2000);
+	}, 800);
 
 	var validateDaysCustomer = new FormData();
 	validateDaysCustomer.append("idCustomerGetDays", id);
@@ -552,7 +560,7 @@ function AddHistoryPaymentCustomer(id, state){
 				}
 			}
 		});
-	}, 3500);
+	}, 1000);
 
 	var activitiesCustomer;
 	var daysCustomer;
@@ -585,7 +593,7 @@ function AddHistoryPaymentCustomer(id, state){
 			}
 		});
 
-	}, 4000);
+	}, 1200);
 }
 
 function PayActualMonth(id){
@@ -719,8 +727,11 @@ function RegisterCustomer(){
                         type:"error",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
-                      });
-                }, 2000);
+                      }, function(){
+						location.reload();
+					  });
+					//location.reload();
+                }, 5500);
 				registerCustomerState = false;
 			}else if(response != "null" && response != "false"){
 				setTimeout(function(){
@@ -730,8 +741,10 @@ function RegisterCustomer(){
                         type:"success",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
-                      });
-                }, 2000);
+                      }, function(){
+						location.reload();
+					  });
+                }, 5500);
 				registerCustomerState = true;
 			}
 			if(response != "ok" && response != "false" && response == "null"){
@@ -761,10 +774,10 @@ function RegisterCustomer(){
 					console.log("respuesta limpia de caracteres " + idOfLastCustomerRegistered);
 				}
 			})
-		}, 2000);
+		}, 800);
 		setTimeout(function(){
 			AddHistoryPaymentCustomer(idOfLastCustomerRegistered, stateCustomer);
-		}, 2500);
+		}, 1000);
 
 	}
 
