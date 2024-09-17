@@ -1,5 +1,11 @@
 <!-- Recent Sales Start -->
 <div class="container-fluid pt-4 px-4 adminModule">
+    <div class="col-md-4 col">
+        <a href="<?php echo $url; ?>views/modules/reports/reports_module.php?report=customers">
+            <button class="btn btn-success">Descargar reporte en Excel</button>
+        </a>
+    </div>
+    <br>
     <div class="bg-secondary text-center rounded p-4">
         <div class="d-flex align-items-center justify-content-between mb-4">
             <h6 class="mb-0">Usuarios</h6>
