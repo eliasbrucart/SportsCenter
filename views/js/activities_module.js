@@ -14,10 +14,13 @@ function UploadActivity(){
         success:(response) => {
             if (response != "false" && response != "null") {
                 alert("Actividad agregada correctamente!");
+                setTimeout(function(){
+                    location.reload();
+                }, 500);
             } else if(response == "false" && response != "null") {
                 alert("La actividad ya esta agregada!");
             }else if(response == "null"){
-                alert("¡Error al agregar el usuario! Intentelo nuevamente!");
+                alert("¡Error al agregar la actividad! Intentelo nuevamente!");
             }
         }
     });
@@ -184,7 +187,7 @@ function DeleteActivity(){
         success:(response) => {
             if(response == "false"){
                 setTimeout(function(){
-                    swal({
+                    Swal.fire({
                         title: "ERROR!",
                         text: "¡No se pudo eliminar la actividad seleccionada!",
                         type:"error",
@@ -193,10 +196,10 @@ function DeleteActivity(){
                       }, function(){
                         location.reload();
                       });
-                }, 2000);
+                }, 1000);
             }else{
                 setTimeout(function(){
-                    swal({
+                    swal.fire({
                         title: "OK!",
                         text: "¡La actividad se elimino con exito!",
                         type:"success",
@@ -205,6 +208,9 @@ function DeleteActivity(){
                       }, function(){
                         location.reload();
                       });
+                }, 1000);
+                setTimeout(function(){
+                    location.reload();
                 }, 2000);
             }
         }

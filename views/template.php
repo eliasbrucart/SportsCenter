@@ -23,7 +23,8 @@
     <link rel="stylesheet" href="<?php echo $url; ?>views/css/plugins/all.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo $url; ?>views/css/plugins/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo $url; ?>views/css/plugins/lightgallery.css" rel="stylesheet">
-	<link rel="stylesheet" href="<?php echo $url; ?>views/css/plugins/sweetalert.css" rel="stylesheet">
+	<!--<link rel="stylesheet" href="<?php echo $url; ?>views/css/plugins/sweetalert.css" rel="stylesheet">-->
+	<link rel="stylesheet" href="<?php echo $url; ?>views/js/plugins/sweetalert2/sweetalert2.css" rel="stylesheet">
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -53,7 +54,8 @@
     <script src="<?php echo $url; ?>views/js/plugins/bootstrap.bundle.min.js"></script>
 	<!--<script src="<?php echo $url; ?>views/js/plugins/bootstrap5/bootstrap.bundle.min.js"></script>-->
 	<script src="<?php echo $url; ?>views/js/plugins/md5-min.js"></script>
-	<script src="<?php echo $url; ?>views/js/plugins/sweetalert.min.js"></script>
+	<!--<script src="<?php echo $url; ?>views/js/plugins/sweetalert.min.js"></script>-->
+	<script src="<?php echo $url; ?>views/js/plugins/sweetalert2/sweetalert2.min.js"></script>
     <!-- Data tables libraries -->
 	<script src="<?php echo $url; ?>views/lib/browser_components/datatables.net/js/jquery.dataTables.min.js"></script>
 	<script src="<?php echo $url; ?>views/lib/browser_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>

@@ -361,7 +361,7 @@ function DeleteCustomer(){
 		success:function(response){
 			if(response == "false"){
 				setTimeout(function(){
-                    swal({
+                    Swal.fire({
                         title: "ERROR!",
                         text: "¡No se pudo eliminar el usuario, intentalo nuevamente!",
                         type:"error",
@@ -374,7 +374,7 @@ function DeleteCustomer(){
 			}else{
 				console.log("respuesta " + response);
 				setTimeout(function(){
-                    swal({
+                    Swal.fire({
                         title: "OK!",
                         text: "¡El usuario se elimino con exito!",
                         type:"success",
@@ -382,8 +382,11 @@ function DeleteCustomer(){
                         closeOnConfirm: false
                       }, function(){
 						location.reload();
-					  });
-                }, 2000);
+					});
+                }, 1000);
+				setTimeout(function(){
+					location.reload();
+				}, 2000);
 			}
 		}
 	});
@@ -710,6 +713,16 @@ function RegisterCustomer(){
 
 	var registerCustomerState = true;
 
+	Swal.fire({
+		title: 'Procesando...',
+		html: 'Porfavor esperar...',
+		allowEscapeKey: false,
+		allowOutsideClick: false,
+		didOpen: () => {
+			Swal.showLoading()
+		}
+	});
+
 	$.ajax({
 		url:hiddenPath+"ajax/admin_module_ajax.php",
         method: "POST",
@@ -735,7 +748,7 @@ function RegisterCustomer(){
 				registerCustomerState = false;
 			}else if(response != "null" && response != "false"){
 				setTimeout(function(){
-                    swal({
+                    /*swal({
                         title: "OK!",
                         text: "¡El usuario se registro correctamente!",
                         type:"success",
@@ -743,7 +756,9 @@ function RegisterCustomer(){
                         closeOnConfirm: false
                       }, function(){
 						location.reload();
-					  });
+					  });*/
+					  Swal.close();
+					  location.reload();
                 }, 5500);
 				registerCustomerState = true;
 			}
