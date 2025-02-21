@@ -313,8 +313,10 @@ function SendEditedCustomer(){
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
                       }, function(){
-						location.reload();
 					  });
+                }, 1000);
+				setTimeout(function(){
+                    location.reload();
                 }, 2000);
 			}else{
 				console.log("respuesta " + response);
@@ -326,8 +328,10 @@ function SendEditedCustomer(){
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
                       }, function(){
-						location.reload();
 					  });
+                }, 1000);
+				setTimeout(function(){
+                    location.reload();
                 }, 2000);
 			}
 		}
@@ -368,8 +372,10 @@ function DeleteCustomer(){
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
                       }, function(){
-						location.reload();
 					  });
+                }, 1000);
+				setTimeout(function(){
+                    location.reload();
                 }, 2000);
 			}else{
 				console.log("respuesta " + response);
@@ -410,23 +416,29 @@ function Pay(id){
 		success:function(response){
 			if(response == "false"){
 				setTimeout(function(){
-                    swal({
+                    Swal.fire({
                         title: "ERROR!",
                         text: "¡Surgio un error al marcar al usuario como pago, intentelo nuevamente!",
                         type:"error",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
                       });
+                }, 1000);
+				setTimeout(function(){
+                    location.reload();
                 }, 2000);
 			}else{
 				setTimeout(function(){
-                    swal({
+                    Swal.fire({
                         title: "OK!",
                         text: "¡El usuario se marco como pago exitosamente!",
                         type:"success",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
                       });
+                }, 1000);
+				setTimeout(function(){
+                    location.reload();
                 }, 2000);
 			}
 		}
@@ -734,7 +746,7 @@ function RegisterCustomer(){
 			console.log("respuesta " + response);
 			if(response == "false" && response != "ok" && response != "null"){
 				setTimeout(function(){
-                    swal({
+                    Swal.fire({
                         title: "ERROR!",
                         text: "¡Surgio un error al registrar el cliente!",
                         type:"error",

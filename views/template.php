@@ -12,6 +12,9 @@
 
         $server = Route::GetBackendRoute();
     ?>
+
+	<link rel="icon" href="<?php echo $url; ?>views/img/wellness-icon.png">
+
     <!-- Customized Bootstrap Stylesheet -->
     <link href="<?php echo $url;?>views/css/plugins/bootstrap5/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->

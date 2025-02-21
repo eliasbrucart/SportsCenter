@@ -61,28 +61,32 @@ function UploadCuota(id, name){
             if(response == "false"){
                 console.log("respuesta " + response);
 				setTimeout(function(){
-                    swal({
+                    Swal.fire({
                         title: "ERROR!",
                         text: "¡No se pudo agregar la cuota para la actividad! Intentelo nuevamente!",
                         type:"error",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
                       }, function(){
-                        location.reload();
                       });
+                }, 1000);
+                setTimeout(function(){
+                    location.reload();
                 }, 2000);
 			}else{
                 console.log("respuesta " + response);
 				setTimeout(function(){
-                    swal({
+                    Swal.fire({
                         title: "OK!",
                         text: "¡Se agrego con exito la cuota correspondiente!",
                         type:"success",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
                       }, function(){
-                        location.reload();
                       });
+                }, 1000);
+                setTimeout(function(){
+                    location.reload();
                 }, 2000);
 			}
         }
@@ -114,27 +118,31 @@ function EditActivity(){
         success:(response) => {
             if(response == "false"){
                 setTimeout(function(){
-                    swal({
+                    Swal.fire({
                         title: "ERROR!",
                         text: "¡No se pudo editar la actividad seleccionada!",
                         type:"error",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
                       }, function(){
-                        location.reload();
                       });
+                }, 1000);
+                setTimeout(function(){
+                    location.reload();
                 }, 2000);
             }else{
                 setTimeout(function(){
-                    swal({
+                    Swal.fire({
                         title: "OK!",
                         text: "¡La actividad se edito con exito!",
                         type:"success",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
                       }, function(){
-                        location.reload();
                       });
+                }, 1000);
+                setTimeout(function(){
+                    location.reload();
                 }, 2000);
             }
         }
@@ -194,9 +202,11 @@ function DeleteActivity(){
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
                       }, function(){
-                        location.reload();
                       });
                 }, 1000);
+                setTimeout(function(){
+                    location.reload();
+                }, 2000);
             }else{
                 setTimeout(function(){
                     swal.fire({
@@ -245,27 +255,31 @@ function EditCuota(){
         success:(response) => {
             if(response == "false"){
                 setTimeout(function(){
-                    swal({
+                    Swal.fire({
                         title: "ERROR!",
                         text: "¡No se pudo editar la cuota seleccionada!",
                         type:"error",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
                       }, function(){
-                        location.reload();
                       });
+                }, 1000);
+                setTimeout(function(){
+                    location.reload();
                 }, 2000);
             }else{
                 setTimeout(function(){
-                    swal({
+                    Swal.fire({
                         title: "OK!",
                         text: "¡La cuota se edito con exito!",
                         type:"success",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
                       }, function(){
-                        location.reload();
                       });
+                }, 1000);
+                setTimeout(function(){
+                    location.reload();
                 }, 2000);
             }
         }
@@ -297,27 +311,31 @@ function DeleteCuota(){
         success:(response) => {
             if(response == "false"){
                 setTimeout(function(){
-                    swal({
+                    Swal.fire({
                         title: "ERROR!",
                         text: "¡No se pudo eliminar la cuota seleccionada!",
                         type:"error",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
                       }, function(){
-                        location.reload();
                       });
-                },2000);
+                },1000);
+                setTimeout(function(){
+                    location.reload();
+                }, 2000);
             }else{
                 setTimeout(function(){
-                    swal({
+                    Swal.fire({
                         title: "OK!",
                         text: "¡La cuota se elimino con exito!",
                         type:"success",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
                       }, function(){
-                        location.reload();
                       });
+                }, 1000);
+                setTimeout(function(){
+                    location.reload();
                 }, 2000);
             }
         }

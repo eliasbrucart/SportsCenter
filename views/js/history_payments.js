@@ -105,21 +105,27 @@ function ChangeStateMonth(state){
             success:(response)=>{
                 console.log("Mes modificado " + response);
                 if(response == "false"){
-                    swal({
+                    Swal.fire({
                         title: "ERROR!",
                         text: "¡Surgio un error al marcar el mes como pago!",
                         type:"error",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
                       });
+                      setTimeout(function(){
+                        location.reload();
+                    }, 2000);
                 }else{
-                    swal({
+                    Swal.fire({
                         title: "OK!",
                         text: "¡El mes se marco como pago!",
                         type:"success",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
                     });
+                    setTimeout(function(){
+                        location.reload();
+                    }, 2000);
                 }
             }
         });
