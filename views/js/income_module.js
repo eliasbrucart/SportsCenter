@@ -56,8 +56,15 @@ function Inocme(){
         console.log("customerExpiration " + customerExpiration.getDate());
   
         console.log("DaysBetween " + DaysBetween(actualDate, customerExpiration));
+
+        var daysLeft = DaysBetween(actualDate, customerExpiration);
+
+        if(daysLeft <= 30){
+          $('.customerDaysLeft').text(daysLeft);
+        }else{
+          $('.customerDaysLeft').text(0);
+        }
   
-        $('.customerDaysLeft').text(DaysBetween(actualDate, customerExpiration));
   
         $('.customerExpiration').text(customerExpirationFormatted);
   
