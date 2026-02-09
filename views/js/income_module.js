@@ -59,7 +59,7 @@ function Inocme(){
 
         var daysLeft = DaysBetween(actualDate, customerExpiration);
 
-        if(daysLeft <= 30){
+        if(daysLeft <= 30 || daysLeft > 30 && actualDate < customerExpiration){
           $('.customerDaysLeft').text(daysLeft);
         }else{
           $('.customerDaysLeft').text(0);
